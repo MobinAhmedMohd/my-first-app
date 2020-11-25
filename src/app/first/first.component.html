@@ -1,0 +1,15 @@
+<h1 [ngClass]= "isGreen ? 'text-green' : 'text-red'">{{text | uppercase}}</h1>
+
+<input type="text" [(ngModel)] = "title">
+<h2>{{title}}</h2>
+
+
+<h1>{{numbers}}</h1>
+
+<ul *ngIf="numbers.length > 0">
+    <li *ngFor="let number of numbers">{{number}}</li>
+</ul>
+
+<p *ngIf="numbers.length == 0">No data</p>
+
+<button (click)="onClick()">Click</button>
